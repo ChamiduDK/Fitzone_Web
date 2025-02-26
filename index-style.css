@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; 
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+/* Variables for consistent color and font */
+:root {
+  --primary-color: #e60000;
+  --secondary-color: #333;
+  --light-color: #f9f9f9;
+  --font-family: 'Arial', sans-serif;
+  --text-color: #555;
+}
+
+/* Basic resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: black;
+  line-height: 1.6;
+  
+}
+
+/* Layout for the sections */
+.intro-section,
+.membership-section {
+  display: grid;
+  gap: 20px;
+  padding: 100px;
+  margin-bottom: 20px;
+}
+
+.intro-section {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.intro-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.features-list {
+  margin: 20px 0;
+  list-style: none;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.secondary-btn {
+  background-color: #e60000;
+  color: var(--light-color);
+  
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.membership-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #fff;
+  background-image: url('img/23_f7dac195e3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.membership-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.membership-section h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.membership-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.membership-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white for card background */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.membership-card:hover {
+  transform: scale(1.05);
+}
+
+.membership-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.benefits-list li {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .intro-section {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+  
+  .membership-content {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Variables for consistent color and font */
+
+/* Section layout */
+.blog-section {
+  padding: 100px;
+  background-color: #fff;
+  text-align: center;
+  
+}
+
+.blog-section h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+
+/* Blog grid layout */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Blog card styling */
+.blog-card {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.blog-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.read-more {
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-section {
+      padding: 20px;
+  }
+}
