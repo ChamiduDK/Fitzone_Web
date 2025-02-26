@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header</title>
+
+    <style>
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        background: rgb(0, 0, 0);
+        color: white;
+      }
+
+      .logo img {
+        max-width: 220px;
+        max-height: 220px;
+        width: auto;
+        height: auto;
+      }
+
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li {
+        position: relative;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 8px 12px;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #ff3333;
+      }
+
+      .find-gym {
+        background: #e60000;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+
+      .find-gym:hover {
+        background: #ff3333;
+      }
+
+      /* Hero Section */
+      .hero {
+        background-image: url("img/5.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .overlay {
+        background: rgba(0, 0, 0, 0.65); 
+        color: #f3f4f6; 
+        text-align: center;
+        padding: 50px;
+        width: 85%;
+        max-width: 900px;
+        border-radius: 12px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        animation: fadeInOverlay 1s ease-out;
+      }
+
+      .overlay h1 {
+        font-size: 3.5em;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        color: #ffffff; 
+        text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7); 
+        animation: slideDown 1.2s ease forwards;
+      }
+
+      .overlay .tagline {
+        font-size: 1.4em;
+        font-weight: 300;
+        color: #d1d5db; 
+        text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6);
+        animation: fadeInTagline 1.5s ease forwards;
+      }
+
+      /* Animations */
+      @keyframes fadeInOverlay {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInTagline {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 0.9;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src="img/1.png" /></div>
+      <nav>
+        <ul>
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../classes.php">Classes</a></li>
+          <li><a href="../about.php">About</a></li>
+          <li><a href="fgallery.php">Gallery</a></li>
+          <li><a href="../contact.php">Contact</a></li>
+          <li><a href="../blog.php">Blog</a></li>
+          <li><a href="../shop/shop.php">Shop</a></li>
+        </ul>
+      </nav>
+      <a href="member/login.php" class="find-gym">Member</a>
+    </header>
+  </body>
+</html>
